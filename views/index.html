@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../public/img/icons/icon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../public/img/icons/iconApple.png">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../public/js/indexLoginCadastro.js"></script>
+    <script src="../app.js"></script>
+    <title>Moooondo da Carne</title>
+</head>
+
+<body>
+    <div class="container">
+        <img class="background_image" src="../public/img/background/signInImage.jpg">
+        <img class="background_image" src="../public/img/background/signUpImage.jpg">
+
+        <main class="box">
+            <img class="logo_mobile" src="../public/img/Logo.png">
+
+            <p class="apresentacao">Bem-vindo ao <br><span>Moooondo da Carne</span></p>
+            
+            <form id="loginForm" action="/login" method="POST">
+                <div class="login">
+                    <h1>Login</h1>
+    
+                    <p class="mensagemErroLogin">E-mail ou senha incorretos!</p>
+    
+                    <div class="loginCadastroItens">
+                        <div class="inputs">
+                            <label>E-mail</label>
+                            <input type="text" name="emaillogin" required>
+                        </div>
+                        <div class="inputs">
+                            <label>Senha</label>
+                            <input type="password" id = "passwordLogin" name="senhalogin" required>
+                            <i class="fa fa-eye" id="OlhoLogin" aria-hidden="true" onclick = "trocarSenha('passwordLogin', 'OlhoLogin')"></i>
+                        </div>
+    
+                        <button type="submit" class="botaoLoginCadastro" name="botaologin">Entrar</button>
+    
+                        <button onclick="toggleLogin()" class="botaoCadastrar">Não possui uma conta? <span>Cadastre-se</span></button>
+                    </div>
+                </div>
+            </form>
+            
+                <div class="signUp">
+                    <h1>Cadastro</h1>
+
+                    <form action="/cadastro" method="POST">
+                        <p class="mensagemErroCadastroEmail" id="mensagemErroCadastroEmail">E-mail inválido!</p>
+                        <p class="mensagemErroCadastroDuplicado">Esta conta já existe!</p>
+                        <p class="mensagemErroCadastroSenha">As senhas digitadas não se coincidem!</p>
+        
+                        <div class="loginCadastroItens">
+                            <div class="inputs">
+                                <label>Nome</label>
+                                <input type="text" name="nome" required>
+                            </div>
+        
+                            <div class="inputs">
+                                <label>E-mail</label>
+                                <input type="text" name="emailcadastro" required>
+                            </div>
+                            <div class="inputs">
+                                <label>Senha</label>
+                                <input type="password" id="passwordCadastro" name="senhacadastro" required>
+                                <i class="fa fa-eye" id="OlhoCadastro" aria-hidden="true" onclick = "trocarSenha('passwordCadastro', 'OlhoCadastro')"></i>
+                            </div>
+                            <div class="inputs">
+                                <label>Confirmar Senha</label>
+                                <input type="password" id="passwordCadastroConfirm" name="senhacadastroconfirm" required>
+                                <i class="fa fa-eye" id="OlhoCadastroConfirm" aria-hidden="true" onclick = "trocarSenha('passwordCadastroConfirm', 'OlhoCadastroConfirm')"></i>
+                            </div>
+                
+                            <button type="submit" class="botaoLoginCadastro" name="botaocadastro">Cadastrar</button>
+                    </form>
+            
+                    <button onclick="toggleLogin()" class="botaoCadastrar">Já possui uma conta? <span>Clique aqui!</span></button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

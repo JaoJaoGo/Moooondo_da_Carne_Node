@@ -1,0 +1,151 @@
+/* Fontes */
+@font-face {
+    font-family: inter;
+    src: url(../fonts/inter/Inter-Regular.ttf);
+}
+
+html, body {
+    font-family: inter;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    overflow: scroll;
+    background-color: #f5f5f5;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    height: 90dvh;
+    justify-content: center;
+}
+
+.textos {
+    text-align: center;
+    margin: 0dvh 10dvw;
+}
+
+h1 {
+    font-size: 175%;
+    letter-spacing: 3.6px;
+}
+
+.textos p {
+    margin-top: 0.5dvh;
+    font-size: 120%;
+}
+
+.logout {
+    background-color: #BC4133;
+    color: #f5f5f5;
+    border: none;
+    font-size: 110%;
+    padding: 2dvh 5dvw;
+    border-radius: 20px;
+    margin-top: 3dvh;
+    margin-bottom: 1dvh;
+    cursor: pointer;
+}
+
+.logout:active {
+    background-color: #913329;
+    color: #f5f5f5;
+}
+
+.linkedinLogo {
+    cursor: pointer;
+}
+
+/* Estilos para Desktop */
+@media only screen and (min-width: 850px) {
+    .logo-image {
+        width: 17dvw;
+        margin-top: -13dvh;
+    }
+
+    .container img {
+        margin-bottom: 4dvh;
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        overflow: visible;
+        color: #f5f5f5;
+        width: 100dvw;
+        height: 10dvh;
+        position: absolute;
+        text-align: center;
+    }
+
+    .links h2 {
+        font-weight: 10;
+        font-size: 120%;
+        letter-spacing: 3.6px;
+        padding-right: 3.5dvw;
+    }
+
+    .telEmail {
+        display: flex;
+        align-items: center;
+        margin-left: 0dvw;
+        padding-right: 3.3dvw;
+        font-size: 15px;
+    }
+
+    .telEmail img {
+        margin-right: 0.5dvw;
+    }
+}
+
+/* Estilos para Mobile */
+@media only screen and (max-width: 850px) {
+    .logo-image {
+        margin-top: -25dvh;
+    }
+
+    .container img {
+        margin-bottom: 10dvh;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        overflow: visible;
+        position: relative;
+        color: #f5f5f5;
+        width: 100dvw;
+        height: fit-content;
+        text-align: center;
+    }
+
+    .links h2 {
+        font-weight: 10;
+        font-size: 120%;
+        letter-spacing: 3.6px;
+    }
+
+    .telEmail {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .telEmail p {
+        margin-top: 1dvh;
+    }
+
+    .telEmail img {
+        margin-right: 1dvw;
+    }
+}
